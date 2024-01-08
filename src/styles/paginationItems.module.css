@@ -1,0 +1,10 @@
+.eachItemStyle {
+    border-width: 0;
+    cursor: pointer;
+}
+.eachItemStyle:hover {
+    background-color: #FFE382;
+}
+span{
+    color: #000;
+}

@@ -1,0 +1,38 @@
+{
+  "header": {
+    "name": "MovieMajlis",
+    "title1": "Movies",
+    "title2": "Language",
+    "title3": "WatchList",
+    "option1": "English",
+    "option2": "Arabic"
+  },
+  "search": {
+    "header": "Welcome To Our Movie App",
+    "header2": "Millions of movies,TV shows and people to discover,Explore Now",
+    "inputPlaceHolder": "Search and Explore",
+    "buttonText": "Search",
+    "emptyInputError": "You Must Enter The Value You Want Search For"
+  },
+  "popular": {
+    "text": "Popular Movies"
+  },
+  "apiRequests": {
+    "requestError": "There is a Problem Exist , Please Try Again"
+  },
+  "movieDetails": {
+    "language": "Language",
+    "duration": "Duration",
+    "min":"Min"
+  },
+  "watchList":{
+    "noMovies":"No Movies In Watch List"
+  },
+  "backHome":{
+    "buttonText":"Back To Home"
+
+  },
+  "searchPage":{
+    "noMovies":"No Movies With This Name"
+  }
+}
