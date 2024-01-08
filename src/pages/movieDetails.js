@@ -60,8 +60,7 @@ const MovieDetails = () => {
                                 <p className="card-text ">{movie.release_date}</p>
                                 <div className="row mb-3">
                                     <Rating
-                                        name="half-rating-read"
-                                        precision={0.5}
+                                    name="read-only"
                                         value={movie.vote_average ? (movie.vote_average / 10) * 5 : 0}
                                         readOnly
                                         className="col-auto"
