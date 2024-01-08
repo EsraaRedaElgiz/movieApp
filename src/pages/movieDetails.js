@@ -6,9 +6,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { toogleFav } from "../store/slices/addFavouriteSlice";
 import { useTranslation } from "react-i18next";
 const MovieDetails = () => {
-    const [t]=useTranslation("global")
+    const [t] = useTranslation("global")
     const [movie, setMovie] = useState({})
     const language = useSelector(state => state.changeLanguage.language)
+    const [rate] = useState(5)
     const dispatch = useDispatch()
     const favouriteMovies = useSelector(state => state.tooglefavourite.favouriteMovies)
     const params = useParams();
@@ -20,6 +21,8 @@ const MovieDetails = () => {
                 setMovie(res.data)
                 setLoading(false)
                 setError(false)
+                console.log(res.data)
+                // movie.vote_average
             }).catch((err) => {
                 setLoading(false)
                 setError(true)
@@ -57,10 +60,17 @@ const MovieDetails = () => {
                                 <p className="card-text ">{movie.release_date}</p>
                                 <div className="row mb-3">
                                     <Rating
-                                        name="simple-controlled"
-                                        value={movie.vote_average ? movie.vote_average : 0}
+                                        name="half-rating-read"
+                                        precision={0.5}
+                                        value={movie.vote_average ? (movie.vote_average / 10) * 5 : 0}
                                         readOnly
                                         className="col-auto"
+                                        sx={{
+                                            '& .MuiRating-iconFilled': {
+                                                color: 'gold',
+                                            },
+
+                                        }}
                                     />
                                     <p className="col" >{movie.vote_count}</p>
                                 </div>
